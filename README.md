@@ -16,6 +16,8 @@ Main collaborators:
 
 - Prof. Dr. Sašo Džeroski, Jožef Stefan Institute, Ljubljana, Slovenia
 
+Original publications:
+----------------------
 
 1. M. Mihelčić, S. Džeroski, N. Lavrač, and T. Šmuc, “Redescription mining with multi-target
 predictive clustering trees,” in Proceedings of the 4th International Workshop, New
@@ -41,6 +43,8 @@ patients,” PLOS ONE, vol. 12, no. 10, pp. 1–35, 2017, doi: 10.1371/journal.p
 10.1371/journal.pone.0187364.
 --------------------------------------------------------------------------------------
 
+Related publications: 
+---------------------
 
 5. H. Blockeel, “Top-down induction of first order logical decision trees,” PhD thesis,
 Katholieke Universiteit Leuven, Belgium, 1998.
