@@ -1,8 +1,8 @@
 This is the repository with the source code of the CLUS-RM library. 
 
-This library contains the code of the CLUS-RM redescription mining algorithm [1,2], based on Predictive Clustering Trees [5]. It also contains the following algorithm extensions: a) using random forest of Predictive Clustering Trees [2] to produce redescriptions, b) using conjunctive refinement procedure [3] to increase redescription accuracy, c) use constraint-based redescrition mining [4] which allows adding user-defined constraints on attributes that build redescription queries. The constraint-based setting allows three modes of targeted redescription exploration.
+The library contains the code of the CLUS-RM redescription mining algorithm [1,2], based on Predictive Clustering Trees [5]. It also contains the following algorithm extensions: a) using random forest of Predictive Clustering Trees [2] to produce redescriptions, b) using conjunctive refinement procedure [3] to increase redescription accuracy, c) use constraint-based redescrition mining [4] which allows adding user-defined constraints on attributes that build redescription queries. The constraint-based setting allows three modes of targeted redescription exploration.
 
-This library also incorporates two modes of redescription set optimization: a) optimization by redescription exchange [1,2] and b) optimization by redescription extraction [3]. 
+It also incorporates two modes of redescription set optimization: a) optimization by redescription exchange [1,2] and b) optimization by redescription extraction [3]. 
 
 
 This library was created as a result of scientific work of Matej Mihelčić < matmih1@gmail.com > in the Data Mining field called Redescription mining [6] with the goal of obtaining a PhD degree in Computer Science at Jožef Stefan International Postgraduate School, Ljubljana, Slovenia.
