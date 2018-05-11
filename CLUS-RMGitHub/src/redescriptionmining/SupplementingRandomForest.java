@@ -59,14 +59,11 @@ public class SupplementingRandomForest {
             }
         System.out.println();
         }
-        //appset.importantAttributes
 
         Mappings fid=new Mappings();
         
         DataSetCreator datJ=new DataSetCreator(appset.viewInputPaths, appset.outFolderPath,appset);
-        //DataSetCreator datJ=new DataSetCreator(appset.viewInputPaths.get(0)/*appset.outFolderPath+"\\input1.arff"*/,appset.viewInputPaths.get(1)/*appset.outFolderPath+"\\input2.arff"*/ , appset.outFolderPath);
-        //fid.createIndex(appset.outFolderPath+"\\Jinput.arff");
-        
+
            if(appset.system.equals("windows"))
             fid.createIndex(appset.outFolderPath+"\\Jinput.arff");
         else
@@ -116,7 +113,7 @@ public class SupplementingRandomForest {
         if(appset.useNetworkAsBackground==true)
               redDistNetwork=new ArrayList<>(appset.numInitial);
          targetAtScore=null;
-        //double Statistics[]={0.0,0.0,0.0};//previousMedian - 0, numberIterationsStable - 1, minDifference - 2
+
         maxDiffScoreDistribution=new ArrayList<>(appset.numInitial);
         
         if(appset.attributeImportance!=0)
@@ -133,16 +130,6 @@ public class SupplementingRandomForest {
             if(appset.attributeImportance!=0)
                 targetAtScore.add(Double.NaN);
         }   
-            
-
-            
-        /*if(appset.attributeImportance!=0)
-            targetAtScore = new ArrayList<>(appset.numRetRed);
-        
-        for(int z=0;z<appset.numRetRed;z++){
-            redScores.add(Double.NaN);
-            redScoresAtt.add(Double.NaN);
-        }*/
       }
                     
         NHMCDistanceMatrix nclMatInit=null;
@@ -228,7 +215,7 @@ public class SupplementingRandomForest {
              initSettings.setPath(appset.outFolderPath+"/view1.s");
         //initSettings.createInitialSettings1(1, datJ.W2indexs.get(0), datJInit.schema.getNbAttributes(), appset);
         System.out.println("distance file size: "+appset.distanceFilePaths.size()+"");
-        if(appset.useNC.size()==0)
+        if(appset.useNC.get(0) == false)
              initSettings.createInitialSettingsGen(0, 3, datJ.W2indexs.get(0), datJ.schema.getNbAttributes(), appset,1);
         else
              initSettings.createInitialSettingsGen(0, 4, datJ.W2indexs.get(0), datJ.schema.getNbAttributes(), appset,1);
@@ -346,7 +333,7 @@ public class SupplementingRandomForest {
         if(appset.useNetworkAsBackground==true)
             appset.networkInit=false;
         
-        if(appset.useNC.size()>=2){
+        if(appset.useNC.size()>=2 && appset.useNC.get(1) == true){
             if(appset.system.equals("windows")) 
                 initSettings.setPath(appset.outFolderPath+"\\view2.s");
             else
@@ -356,7 +343,7 @@ public class SupplementingRandomForest {
          else
             initSettings.createInitialSettingsGenN(1, datJ.W2indexs.get(0)+1, datJ.schema.getNbAttributes()+1, datJ.schema.getNbAttributes(), appset); 
         }
-        if(appset.useNC.size()>1){
+        if(appset.useNC.size()>1 && appset.useNC.get(0) == true){
              if(appset.system.equals("windows")) 
                 initSettings.setPath(appset.outFolderPath+"\\view1.s");
              else
