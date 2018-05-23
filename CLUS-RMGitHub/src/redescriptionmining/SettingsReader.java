@@ -514,7 +514,7 @@ public class SettingsReader {
             if(appset.numTreesinForest>1)
                     file+="SelectRandomSubspaces = "+((int)(Math.max(((W2indexEnd-1-W2indexStart+1-2+1)*(1-Math.pow(0.001, 1.0/(appset.numTreesinForest*appset.aTreeDepth))))+1,((Math.log10((W2indexEnd-1-W2indexStart+1-2+1))/Math.log10(2))+1))))/*((int)Math.max((((double)W2indexEnd-1-W2indexStart+1-2+1)/(double)appset.numTreesinForest),((Math.log10((W2indexEnd-1-W2indexStart+1-2+1))/Math.log10(2))+1)))/*((int)Math.sqrt((W2indexEnd-1-W2indexStart+1-2+1))+1)*/+"\n";
             else 
-                file+="SelectRandomSubspaces = "+(W2indexEnd-1-W2indexStart+1)+"\n";
+                file+="SelectRandomSubspaces = "+(W2indexEnd-W2indexStart+1)+"\n";
             
             file+="ConvertToRules = Yes\n";
             file+="[Output]\n";

@@ -98,8 +98,7 @@ public class SupplementingRandomForest {
        }
         
         
-        if(appset.optimizationType==0){
-            
+        if(appset.optimizationType==0){   
                    
          elemFreq=new int[datJ.numExamples];
          attrFreq=new int[datJ.schema.getNbAttributes()];  

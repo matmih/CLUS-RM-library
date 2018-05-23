@@ -580,6 +580,8 @@ public class DataSetCreator {
          System.out.println("Num shuffling steps: "+numShufflingStep);
          
          int numIt=0, step=dataList.size()/100;
+         if(step==0)
+             step=1;
          //Random r=new Random();
          
           for(int j=0;j<dataList.size();j++){
